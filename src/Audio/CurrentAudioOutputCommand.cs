@@ -1,4 +1,5 @@
 ﻿// ReSharper disable CheckNamespace
+
 namespace Loupedeck.AudioOutputPlugin;
 
 using JetBrains.Annotations;
@@ -6,7 +7,7 @@ using JetBrains.Annotations;
 [UsedImplicitly]
 public sealed class CurrentAudioOutputCommand : PluginDynamicCommand
 {
-    private WindowsAudioOutputMonitor _monitor;
+    private WindowsAudioOutputMonitor? _monitor;
     private volatile String _outputName = "Loading...";
 
     public CurrentAudioOutputCommand()

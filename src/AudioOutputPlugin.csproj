@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net10.0-windows</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>disable</Nullable>
+        <Nullable>enable</Nullable>
         <RootNamespace>Loupedeck.AudioOutputPlugin</RootNamespace>
 
         <ErrorReport>prompt</ErrorReport>
@@ -24,6 +24,10 @@
         <PluginShortName>AudioOutput</PluginShortName>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
     <ItemGroup>
         <Reference Include="PluginApi">
             <HintPath>$(PluginApiDir)PluginApi.dll</HintPath>
@@ -31,20 +35,20 @@
     </ItemGroup>
 
     <ItemGroup>
-    <PackageReference Include="JetBrains.Annotations" Version="2026.2.0" />
+        <PackageReference Include="JetBrains.Annotations" Version="2026.2.0"/>
         <PackageReference Include="NAudio.Wasapi" Version="3.1.0"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Remove="obj\**" />
+        <Compile Remove="obj\**"/>
     </ItemGroup>
 
     <ItemGroup>
-      <EmbeddedResource Remove="obj\**" />
+        <EmbeddedResource Remove="obj\**"/>
     </ItemGroup>
 
     <ItemGroup>
-      <None Remove="obj\**" />
+        <None Remove="obj\**"/>
     </ItemGroup>
 
     <Target Name="CopyPackage" AfterTargets="PostBuildEvent">

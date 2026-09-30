@@ -1,4 +1,5 @@
 ﻿// ReSharper disable once CheckNamespace
+
 namespace Loupedeck.AudioOutputPlugin;
 
 using NAudio.CoreAudioApi;
@@ -51,10 +52,10 @@ internal sealed class WindowsAudioOutputMonitor : IDisposable
         this._notificationEnumerator.Dispose();
     }
 
-    public event Action<String> OutputChanged;
+    public event Action<String>? OutputChanged;
 
     private void OnDefaultDeviceChanged(
-        Object sender,
+        Object? sender,
         DefaultDeviceChangedEventArgs e)
     {
         if (this._disposed)

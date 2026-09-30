@@ -1,11 +1,12 @@
 // ReSharper disable once CheckNamespace
+
 namespace Loupedeck.AudioOutputPlugin;
 
 // A helper class that enables logging from the plugin code.
 
 internal static class PluginLog
 {
-    private static PluginLogFile _pluginLogFile;
+    private static PluginLogFile? _pluginLogFile;
 
     public static void Init(PluginLogFile pluginLogFile)
     {

@@ -1,4 +1,5 @@
 // ReSharper disable once CheckNamespace
+
 namespace Loupedeck.AudioOutputPlugin;
 
 using System.Reflection;
@@ -9,7 +10,7 @@ using System.Reflection;
 
 internal static class PluginResources
 {
-    private static Assembly _assembly;
+    private static Assembly? _assembly;
 
     public static void Init(Assembly assembly)
     {
