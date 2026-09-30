@@ -1,4 +1,5 @@
-﻿namespace Loupedeck.AudioOutputPlugin;
+﻿// ReSharper disable once CheckNamespace
+namespace Loupedeck.AudioOutputPlugin;
 
 using NAudio.CoreAudioApi;
 
@@ -22,7 +23,7 @@ internal sealed class WindowsAudioOutputMonitor : IDisposable
 
         // Do not depend on the Logi Plugin Service having a
         // SynchronizationContext. Notifications are received directly
-        // from Windows and we move the actual endpoint query onto the
+        // from Windows, and we move the actual endpoint query onto the
         // thread pool below.
         this._notificationClient =
             this._notificationEnumerator.CreateNotificationClient(

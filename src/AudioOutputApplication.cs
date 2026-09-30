@@ -1,7 +1,10 @@
 namespace Loupedeck.AudioOutputPlugin;
 
+using JetBrains.Annotations;
+
 // This class can be used to connect the Loupedeck plugin to an application.
 
+[UsedImplicitly]
 public class AudioOutputApplication : ClientApplication
 {
     // This method can be used to link the plugin to a Windows application.

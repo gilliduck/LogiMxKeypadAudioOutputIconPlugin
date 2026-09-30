@@ -1,7 +1,10 @@
 namespace Loupedeck.AudioOutputPlugin;
 
+using JetBrains.Annotations;
+
 // This class contains the plugin-level logic of the Loupedeck plugin.
 
+[UsedImplicitly]
 public class AudioOutputPlugin : Plugin
 {
     // Initializes a new instance of the plugin class.

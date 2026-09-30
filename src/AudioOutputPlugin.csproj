@@ -31,7 +31,20 @@
     </ItemGroup>
 
     <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="2026.2.0" />
         <PackageReference Include="NAudio.Wasapi" Version="3.1.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="obj\**" />
     </ItemGroup>
 
     <Target Name="CopyPackage" AfterTargets="PostBuildEvent">
